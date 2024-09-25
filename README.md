@@ -8,9 +8,9 @@ This repository contains the submissions for the NYU CTF Dataset [leaderboard](n
 2. Clone your forked repository - use `git clone --depth 1` to avoid pulling the entire history as it can be large
 3. Create a folder under `transcripts/` with a unique descriptive name:
 4. The folder should contain the following:
-    i. A `summary.json` with the success result of each challenge and submission metadata (see structure below)
-    ii. The agent conversation transcripts or logs (see details below)
-    iii. A README that describes your submission, the format of your log files, and provides a point of contact
+    1. A `summary.json` with the success result of each challenge and submission metadata (see structure below)
+    2. The agent conversation transcripts or logs (see details below)
+    3. A README that describes your submission, the format of your log files, and provides a point of contact
 5. Each folder under `transcripts/` containing a valid `summary.json` is considered a submission
 6. After creating your folder, generate the `leaderboard.json` (described below) to verify if your submission is processed correctly
 7. Finally, create a PR to the main repository with your submission
@@ -25,7 +25,8 @@ This repository contains the submissions for the NYU CTF Dataset [leaderboard](n
     "agent": ...,
     "comment": ...,
     "model": ...,
-    "link": ...
+    "link": ...,
+    "date": ...
   },
   "results": {
     <challenge canonical name>: <true for success|false for failure>,
@@ -41,6 +42,7 @@ The metadata should contain the following fields:
 - `comment`: A short comment to describe the results, e.g. "pass@5" (leave empty if not needed)
 - `model`: Exact model string with date stamp, e.g. gpt-4-0125-preview
 - `link`: Link to agent repository or documentation
+- `date`: Date of submission in "YYYY/MM/DD" format
 
 The results should contain success or failure for each challenge of the dataset.
 The challenge canonical name can be generated with the `nyuctf` package using `CTFChallenge.canonical_name`.
@@ -63,3 +65,7 @@ You may refer to the baseline logs for an example JSON format of the transcripts
 `leaderboard.json` is the file that accumulates all leaderboard submissions, and is loaded by the leaderboard webpage.
 
 Run the `generate_leaderboard.py` script to generate it.
+
+```
+python3 generate_leaderboard.py --dataset ~/LLM_CTF_Database/test_dataset.json
+```

@@ -52,9 +52,10 @@ if __name__ == "__main__":
         leaderboard["submissions"].append({
             "name": metadata["agent"],
             "comment": metadata["comment"],
-            "logs": REPOSITORY + str(submission.relative_to(basedir)),
             "link": metadata["link"],
             "model": metadata["model"],
+            "date": metadata["date"],
+            "logs": REPOSITORY + str(submission.relative_to(basedir)),
             "solved": total,
             "per_category": per_category,
         })
