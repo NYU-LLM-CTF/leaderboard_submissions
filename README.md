@@ -1,6 +1,6 @@
 # NYU CTF Dataset Leaderboard
 
-This repository contains the submissions for the NYU CTF Dataset [leaderboard](nyu-llm-ctf.github.io).
+This repository contains the submissions for the NYU CTF Dataset [leaderboard](https://nyu-llm-ctf.github.io).
 
 ## How to submit
 
