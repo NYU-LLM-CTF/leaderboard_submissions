@@ -67,5 +67,5 @@ You may refer to the baseline logs for an example JSON format of the transcripts
 Run the `generate_leaderboard.py` script to generate it.
 
 ```
-python3 generate_leaderboard.py --dataset ~/LLM_CTF_Database/test_dataset.json
+python3 generate_leaderboard.py --dataset ~/NYU_CTF_Bench/test_dataset.json
 ```
