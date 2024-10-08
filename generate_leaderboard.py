@@ -55,7 +55,7 @@ if __name__ == "__main__":
             "link": metadata["link"],
             "model": metadata["model"],
             "date": metadata["date"],
-            "logs": REPOSITORY + str(submission.relative_to(basedir)),
+            "logs": REPOSITORY + str(submission.parent.relative_to(basedir)),
             "solved": total,
             "per_category": per_category,
         })
